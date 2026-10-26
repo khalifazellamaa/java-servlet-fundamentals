@@ -20,7 +20,6 @@ public class ShowSession extends HttpServlet {
         
         out.println("<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Session</title></head><body>");
         
-        // CAS 1 : Première visite ou infos manquantes -> Afficher le formulaire
         if (visitCount == null || fullName == null || dobStr == null) {
             session.setAttribute("visitCount", 1);
             out.println("<h2>Welcome on my site</h2>");
@@ -30,9 +29,7 @@ public class ShowSession extends HttpServlet {
             out.println("  Date de naissance : <input type='date' name='dob' required><br><br>");
             out.println("  <button type='submit'>Envoyer</button>");
             out.println("</form>");
-        } 
-        // CAS 2 : Utilisateur connu -> Calculer l'anniversaire
-        else {
+        } else {
             int newCount = visitCount + 1;
             session.setAttribute("visitCount", newCount);
             
@@ -40,7 +37,6 @@ public class ShowSession extends HttpServlet {
             out.println("<p>Nombre de visites : " + newCount + "</p>");
             
             try {
-                // Calcul des jours avant l'anniversaire
                 LocalDate dob = LocalDate.parse(dobStr);
                 LocalDate today = LocalDate.now();
                 LocalDate nextBirthday = dob.withYear(today.getYear());

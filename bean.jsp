@@ -14,14 +14,10 @@
 <body>
     <h1>Données reçues (via JavaBean)</h1>
 
-    <%-- 1. إنشاء كائن من كلاس Person (إذا لم يكن موجوداً) --%>
     <jsp:useBean id="person" class="isep.lab1.bean.Person" scope="request" />
 
-    <%-- 2. تعبئة الكائن تلقائياً ببيانات الـ Form --%>
-    <%-- خاصية * تعني: ابحث عن أي Request Parameter يطابق اسم المتغير في الكلاس وقم بتعبئته --%>
     <jsp:setProperty name="person" property="*" />
 
-    <%-- 3. عرض البيانات من الكائن --%>
     <table>
         <tr>
             <th>Champ</th>

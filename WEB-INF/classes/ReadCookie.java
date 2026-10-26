@@ -14,7 +14,6 @@ public class ReadCookie extends HttpServlet {
         out.println("<html><body>");
         out.println("<h1>Vos Cookies :</h1>");
         
-        // Récupérer tous les cookies envoyés par le navigateur
         Cookie[] cookies = request.getCookies();
         
         if (cookies != null) {
