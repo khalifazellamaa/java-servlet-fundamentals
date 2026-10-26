@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee 
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <display-name>Lab1</display-name>
+
+    <!-- ========================================== -->
+    <!-- 1. SERVLET TP1 (Formulaire)                -->
+    <!-- ========================================== -->
+    <servlet>
+        <servlet-name>Tp1</servlet-name>
+        <servlet-class>Tp1</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Tp1</servlet-name>
+        <url-pattern>/tp1</url-pattern>
+        <url-pattern>/FormServlet</url-pattern>
+        <url-pattern>/Form_Servlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- ========================================== -->
+    <!-- 2. SERVLET READCOOKIE                      -->
+    <!-- ========================================== -->
+    <servlet>
+        <servlet-name>ReadCookie</servlet-name>
+        <servlet-class>ReadCookie</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ReadCookie</servlet-name>
+        <url-pattern>/ReadCookie</url-pattern>
+    </servlet-mapping>
+
+    <!-- ========================================== -->
+    <!-- 3. SERVLET VISITCOUNTER (Extra Cookies)    -->
+    <!-- ========================================== -->
+    <servlet>
+        <servlet-name>VisitCounter</servlet-name>
+        <servlet-class>VisitCounter</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>VisitCounter</servlet-name>
+        <url-pattern>/VisitCounter</url-pattern>
+    </servlet-mapping>
+
+    <!-- ========================================== -->
+    <!-- 4. SERVLET SHOWSESSION (Sessions)          -->
+    <!-- ========================================== -->
+    <servlet>
+        <servlet-name>ShowSession</servlet-name>
+        <servlet-class>ShowSession</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShowSession</servlet-name>
+        <url-pattern>/ShowSession</url-pattern>
+    </servlet-mapping>
+        <!-- Déclaration du Servlet ListItems -->
+    <servlet>
+        <servlet-name>ListItems</servlet-name>
+        <servlet-class>ListItems</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ListItems</servlet-name>
+        <url-pattern>/ListItems</url-pattern>
+    </servlet-mapping>
+
+    <!-- ========================================== -->
+    <!-- PAGES PAR DÉFAUT (TOUJOURS À LA FIN)       -->
+    <!-- ========================================== -->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>Tp1.html</welcome-file>
+    </welcome-file-list>
+
+</web-app>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter des Items</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        input[type="text"] { padding: 5px; width: 300px; }
+        button { padding: 5px 15px; background-color: #3498db; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Ma Liste d'Items</h1>
+    
+    <!-- Le formulaire qui envoie vers le Servlet ListItems en POST -->
+    <form action="ListItems" method="POST">
+        Item : <input type="text" name="newItem" required>
+        <p>
+        <input type="submit" value="Ajouter l'item">
+    </form>
+</body>
+</html>
